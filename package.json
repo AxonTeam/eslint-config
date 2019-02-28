@@ -1,0 +1,12 @@
+{
+  "name": "@axonteam/eslint-config-axonteam",
+  "version": "1.0.0",
+  "description": "Eslint config for all AxonTeam projects",
+  "main": "index.js",
+  "repository": "https://github.com/AxonTeam/eslint-config-axonteam.git",
+  "author": "khaazz <khaaz.dev@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">= 3"
+  }
+}
