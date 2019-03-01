@@ -1,0 +1,512 @@
+module.exports = {
+    env: {
+        es6: true,
+        node: true,
+        mongo: true,
+    },
+    extends: "eslint:recommended",
+    parserOptions: {
+        ecmaVersion: 8,
+        sourceType: "module",
+    },
+    rules: {
+
+        // -----------------------
+        // CODE
+        // -----------------------
+        "no-use-before-define": [
+            "error",
+            {
+                functions: true,
+                classes: true,
+                variables: true,
+            }
+        ],
+        eqeqeq: [ // === instead of ==
+            "error",
+            "smart",
+        ],
+        yoda: [ // comparison: color === 'blue'
+            "error", 
+            "never", 
+            { 
+                "exceptRange": true 
+            }
+        ],
+        "max-classes-per-file": [
+            "error",
+            1,
+        ],
+        "no-magic-numbers": [
+            "error",
+            { 
+                "ignoreArrayIndexes": true,
+            },
+        ],
+        strict: [
+            "error",
+            "global",
+        ],
+        "no-unused-expressions": [
+            "error",
+            {
+                allowShortCircuit: true,
+                allowTernary: true,
+            },
+        ],
+        "accessor-pairs": "warn", // setter goes with a getter
+        "array-callback-return": "error",
+        "no-implied-eval": "error",
+        "no-lone-blocks": "error",
+        "no-sequences": "error", // commas
+        "no-throw-literal": "error",
+        "no-useless-call": "error", // .call
+        "wrap-iife": "error", // const f = (function () { }()) <= wrap
+        "object-shorthand": [
+            "error",
+            "always",
+        ],
+        "no-confusing-arrow": [
+            "error",
+            {
+                allowParens: true,
+            },
+        ],
+        "no-console": "off",
+        "unicode-bom": [
+            "error",
+            "never",
+        ],
+        
+        // NEWLINE
+        "newline-per-chained-call": [
+            "error", 
+            { 
+                ignoreChainWithDepth: 3, 
+            },
+        ],
+        "array-element-newline": [
+            "error",
+            {
+                multiline: true,
+                minItems: 5,
+            },
+        ],
+        "array-bracket-newline": [
+            "error",
+            {
+                multiline: true,
+                minItems: 5,
+            },
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                multiline: true,
+                consistent: true,
+                minProperties: 5,
+            },
+        ],
+
+        // OPERATORS
+        "no-lonely-if": "error",
+        "no-mixed-operators": "error",
+        "no-void": "error", // void operator
+        "no-eval": "error", // eval operator
+        "no-nested-ternary": "error",
+        "no-unneeded-ternary": "error",
+        "no-useless-computed-key": "error",
+        "no-useless-constructor": "error",
+        "no-else-return": [
+            "error", 
+            { 
+                allowElseIf: false,
+            },
+        ],
+
+        "operator-assignment": [
+            "error",
+            "alwais",
+        ],
+        "no-duplicate-imports": [
+            "error",
+            {
+                includeExports: true,
+            },
+        ],
+        "prefer-arrow-callback": [
+            "error",
+            { 
+                allowNamedFunctions: false,
+                allowUnboundThis: true, 
+            }
+        ],
+		"prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-destructuring": [ // CAREFUL FOR THIS ONE
+            "error", 
+            {
+                array: false,
+                object: true,
+            }, 
+            {
+                enforceForRenamedProperties: false,
+            },
+        ],
+        "prefer-template": "warn",
+
+        // VARIABLES
+        "camelcase": [
+            "error",
+            {
+                properties: "always",
+                ignoreDestructuring: false,
+            },
+        ],
+        "one-var": [
+            "error",
+            "consecutive",
+        ],
+        "one-var-declaration-per-line": [
+            "error",
+            "always",
+        ],
+        "no-invalid-this": "error", // this outside of class / function
+        "no-shadow-restricted-names": "error",
+        "no-shadow": [
+            "error",
+            {
+                builtinGlobals: true,
+                hoist: "functions",
+                allow: [
+                    "resolve",
+                    "reject",
+                    "done",
+                    "cb",
+                    "callback",
+                ],
+            },
+        ],
+        "prefer-const": [
+            "error",
+        ],
+        "no-var": [
+            "error",
+        ],
+        "consistent-this": [
+            "error", 
+            "self",
+        ],
+        "no-self-compare": "error",
+        "no-useless-rename": "error",
+        
+        // FUNCTIONS
+        "no-empty-function": [
+            "error",
+            {
+                allow: [
+                    "arrowFunctions"
+                ] 
+            }
+        ],
+        "no-return-assign": "error", // assignement in return statement
+        "no-return-await": "error",
+        "callback-return": "error",
+        "handle-callback-err": [
+            "error", 
+            "^(err|error|.+Error)$",
+        ],
+        "arrow-body-style": [
+            "error",
+            "as-needed",
+            {
+                requireReturnForObjectLiteral: true,
+            },
+        ],
+        "implicit-arrow-linebreak": [
+            "error",
+            "beside",
+        ],
+        "consistent-return": [
+            "error",
+            {
+                treatUndefinedAsUnspecified: true,
+            },
+        ],
+
+        // LOOP
+        "no-unmodified-loop-condition": "error",
+
+        // NUMBERS - CHAR
+        "no-floating-decimal": "error",
+        "no-octal-escape": "error", // \u00A9 or \xA9 (unicode or hexa)
+        "no-useless-concat": "error",
+
+        // CREATION
+        "no-new-func": "error",
+        "no-new-wrappers": "error",
+        "no-new-object": "error",
+        "no-array-constructor": "error",
+        "no-new": "error",
+        "new-cap": [
+            "error",
+            {
+                newIsCap: true,
+                capIsNew: true,
+            }
+        ],
+        
+        // COMPLEXITY
+        // --- other max rules are not used because too stricts? ---
+        "max-depth": [
+            "error",
+            4,
+        ],
+        "max-nested-callbacks": [
+            "error", 
+            { 
+                max: 4, 
+            },
+        ],
+        "max-statements-per-line": [
+            "error", 
+            { 
+                max: 2, 
+            },
+        ],
+        
+
+        // -----------------------
+        // STYLE (visual)
+        // -----------------------
+        indent: [
+            error,
+            4,
+            { 
+                SwitchCase: 1 
+            }
+        ],
+        semi: [
+            "error", 
+            "always"
+        ],
+        "comma-dangle": [
+            "error",
+            "always-multiline",
+        ],
+        "semi-style": [
+            "error",
+            "last",
+        ],
+        "linebreak-style": [
+            "error", 
+            "unix",
+        ],
+        "comma-style": [
+            "error",
+            "last",
+        ],
+        "brace-style": [
+            "error",
+            "1tbs",
+            { 
+                allowSingleLine: false, 
+            },
+        ],
+
+        // CODE
+        "dot-location": [
+            "error", 
+            "property",
+        ],
+        "dot-notation": [
+            "error",
+            { 
+                allowKeywords: false,
+                allowPattern: "^[a-z]+((_|-)[a-z]+)+$",
+            }
+        ],
+        "operator-linebreak": [
+            "error", 
+            "before"
+        ],
+        
+        // QUOTES
+        quotes: [
+            error,
+            single,
+            { 
+                avoidEscape: true, 
+                allowTemplateLiterals: true,
+            }
+        ],
+        "quote-props": [
+            "error",
+            "consistent-as-needed",
+        ],
+        
+        // -----------------------
+        // SPACING
+        // -----------------------
+        "eol-last": [ // ending space
+            "error",
+            "always",
+        ],
+        "no-irregular-whitespace": [
+            error,
+            {
+                skipStrings: true,
+                skipComments: true,
+                skipRegExps: true,
+                skipTemplates: true,
+            }
+        ],
+        "no-trailing-spaces": [
+            "error",
+            { 
+                skipBlankLine: true,
+                ignoreComments: false,
+            },
+        ],
+        "no-mixed-spaces-and-tabs": [
+            "error", 
+            "smart-tabs"
+        ],
+        "no-whitespace-before-property": "error",
+        "no-multi-spaces": [
+            "error", 
+            {
+                exceptions: {
+                    VariableDeclarator: true, 
+                },
+            },
+        ],
+        "space-in-parens": [
+            "error",
+            "never",
+            { 
+                exceptions: [
+                    "{}",
+                    "[]",
+                    "()",
+                ], 
+            }
+        ],
+        "func-call-spacing": [
+            "error", 
+            "never",
+            { 
+                allowNewlines: false 
+            },
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "never",
+        ],
+        "object-curly-spacing": [
+            "error", 
+            "always",
+        ],
+        "arrow-spacing": [
+            "error",
+            {
+                before: true,
+                after: true,
+            }
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                before: false,
+                after: true,
+            },
+        ],
+        "semi-spacing": [ // semi colon spacing
+            "error",
+            {
+                before: false, 
+                after: true
+            },
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                before: true,
+                after: true,
+            }
+        ],
+        "key-spacing": [
+            "error",
+            {
+                beforeColon: false,
+                afterColon: true,
+                mode: "strict"
+            },
+        ],
+        "block-spacing": [
+            "error",
+            "always",
+        ],
+        "computed-property-spacing": [
+            "error",
+            "never",
+        ],
+        "rest-spread-spacing": [
+            "error",
+            "never",
+        ],
+        "yield-star-spacing": [
+            "error", 
+            {
+                before: false, 
+                after: true,
+            },
+        ],
+        "template-curly-spacing": [
+            "error",
+            "never",
+        ],
+
+        // BLOCK SPACING
+        "padded-blocks": [ // CHECK IF NEED CHANGE ???
+            "error",
+            "never",
+        ],
+		"space-before-blocks": [
+            "error",
+            "always",
+        ],
+		"space-before-function-paren": [
+            "error", 
+            "never",
+            { 
+                anonymous: "always"
+            },
+        ],
+		"space-infix-ops": "error",
+		"space-unary-ops": [
+            "error",
+            {
+                words: true, 
+                nonwords: false,
+            },
+        ],
+        "lines-between-class-members": [
+            "error",
+            "always",
+        ],
+        
+        // COMMENTS
+        "spaced-comment": [
+            "error", 
+            "always", 
+            { 
+                exceptions: [
+                    "-", 
+                    "*", 
+                    "+",
+                ] 
+            },
+        ],
+    }
+}
