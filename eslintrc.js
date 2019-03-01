@@ -1,15 +1,15 @@
 module.exports = {
-    env: {
-        es6: true,
-        node: true,
-        mongo: true,
+    "env": {
+        "es6": true,
+        "node": true,
+        "mongo": true,
     },
-    extends: "eslint:recommended",
-    parserOptions: {
-        ecmaVersion: 8,
-        sourceType: "module",
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
     },
-    rules: {
+    "rules": {
 
         // -----------------------
         // CODE
@@ -17,16 +17,16 @@ module.exports = {
         "no-use-before-define": [
             "error",
             {
-                functions: true,
-                classes: true,
-                variables: true,
+                "functions": true,
+                "classes": true,
+                "variables": true,
             }
         ],
-        eqeqeq: [ // === instead of ==
+        "eqeqeq": [ // === instead of ==
             "error",
             "smart",
         ],
-        yoda: [ // comparison: color === 'blue'
+        "yoda": [ // comparison: color === 'blue'
             "error", 
             "never", 
             { 
@@ -43,15 +43,15 @@ module.exports = {
                 "ignoreArrayIndexes": true,
             },
         ],
-        strict: [
+        "strict": [
             "error",
             "global",
         ],
         "no-unused-expressions": [
             "error",
             {
-                allowShortCircuit: true,
-                allowTernary: true,
+                "allowShortCircuit": true,
+                "allowTernary": true,
             },
         ],
         "accessor-pairs": "warn", // setter goes with a getter
@@ -69,7 +69,7 @@ module.exports = {
         "no-confusing-arrow": [
             "error",
             {
-                allowParens: true,
+                "allowParens": true,
             },
         ],
         "no-console": "off",
@@ -82,29 +82,29 @@ module.exports = {
         "newline-per-chained-call": [
             "error", 
             { 
-                ignoreChainWithDepth: 3, 
+                "ignoreChainWithDepth": 3, 
             },
         ],
         "array-element-newline": [
             "error",
             {
-                multiline: true,
-                minItems: 3,
+                "multiline": true,
+                "minItems": 3,
             },
         ],
         "array-bracket-newline": [
             "error",
             {
-                multiline: true,
-                minItems: 3,
+                "multiline": true,
+                "minItems": 3,
             },
         ],
         "object-curly-newline": [
             "error",
             {
-                multiline: true,
-                consistent: true,
-                minProperties: 3,
+                "multiline": true,
+                "consistent": true,
+                "minProperties": 3,
             },
         ],
 
@@ -120,7 +120,7 @@ module.exports = {
         "no-else-return": [
             "error", 
             { 
-                allowElseIf: false,
+                "allowElseIf": false,
             },
         ],
 
@@ -131,14 +131,14 @@ module.exports = {
         "no-duplicate-imports": [
             "error",
             {
-                includeExports: true,
+                "includeExports": true,
             },
         ],
         "prefer-arrow-callback": [
             "error",
             { 
-                allowNamedFunctions: false,
-                allowUnboundThis: true, 
+                "allowNamedFunctions": false,
+                "allowUnboundThis": true, 
             }
         ],
 		"prefer-rest-params": "error",
@@ -146,11 +146,11 @@ module.exports = {
         "prefer-destructuring": [ // CAREFUL FOR THIS ONE
             "warn", 
             {
-                array: false,
-                object: true,
+                "array": false,
+                "object": true,
             }, 
             {
-                enforceForRenamedProperties: false,
+                "enforceForRenamedProperties": false,
             },
         ],
         "prefer-template": "warn",
@@ -159,15 +159,15 @@ module.exports = {
         "camelcase": [
             "error",
             {
-                properties: "never", // API request sometimes need snake case names
-                ignoreDestructuring: true,
+                "properties": "never", // API request sometimes need snake case names
+                "ignoreDestructuring": true,
             },
         ],
         "one-var": [
             "error",
             {
-                initialized: "never",
-                uninitialized: "consecutive",
+                "initialized": "never",
+                "uninitialized": "consecutive",
             },
         ],
         "one-var-declaration-per-line": [
@@ -179,9 +179,9 @@ module.exports = {
         "no-shadow": [
             "warn",
             {
-                builtinGlobals: true,
-                hoist: "functions",
-                allow: [
+                "builtinGlobals": true,
+                "hoist": "functions",
+                "allow": [
                     "module",
                     "cd",
                     "resolve",
@@ -209,7 +209,7 @@ module.exports = {
         "no-empty-function": [
             "error",
             {
-                allow: [
+                "allow": [
                     "arrowFunctions"
                 ] 
             }
@@ -225,7 +225,7 @@ module.exports = {
             "error",
             "as-needed",
             {
-                requireReturnForObjectLiteral: true,
+                "requireReturnForObjectLiteral": true,
             },
         ],
         "implicit-arrow-linebreak": [
@@ -235,7 +235,7 @@ module.exports = {
         "consistent-return": [
             "error",
             {
-                treatUndefinedAsUnspecified: true,
+                "treatUndefinedAsUnspecified": true,
             },
         ],
 
@@ -256,8 +256,8 @@ module.exports = {
         "new-cap": [
             "error",
             {
-                newIsCap: true,
-                capIsNew: true,
+                "newIsCap": true,
+                "capIsNew": true,
             }
         ],
         
@@ -270,13 +270,13 @@ module.exports = {
         "max-nested-callbacks": [
             "error", 
             { 
-                max: 4, 
+                "max": 4, 
             },
         ],
         "max-statements-per-line": [
             "error", 
             { 
-                max: 2, 
+                "max": 2, 
             },
         ],
         
@@ -284,14 +284,14 @@ module.exports = {
         // -----------------------
         // STYLE (visual)
         // -----------------------
-        indent: [
+        "indent": [
             "error",
             4,
             { 
-                SwitchCase: 1 
+                "SwitchCase": 1 
             }
         ],
-        semi: [
+        "semi": [
             "error", 
             "always"
         ],
@@ -315,7 +315,7 @@ module.exports = {
             "error",
             "1tbs",
             { 
-                allowSingleLine: false, 
+                "allowSingleLine": false, 
             },
         ],
 
@@ -337,12 +337,12 @@ module.exports = {
         ],
         
         // QUOTES
-        quotes: [
+        "quotes": [
             "error",
             "single",
             { 
-                avoidEscape: true, 
-                allowTemplateLiterals: true,
+                "avoidEscape": true, 
+                "allowTemplateLiterals": true,
             }
         ],
         "quote-props": [
@@ -360,17 +360,17 @@ module.exports = {
         "no-irregular-whitespace": [
             "error",
             {
-                skipStrings: true,
-                skipComments: true,
-                skipRegExps: true,
-                skipTemplates: true,
+                "skipStrings": true,
+                "skipComments": true,
+                "skipRegExps": true,
+                "skipTemplates": true,
             }
         ],
         "no-trailing-spaces": [
             "error",
             { 
-                skipBlankLines: true,
-                ignoreComments: false,
+                "skipBlankLines": true,
+                "ignoreComments": false,
             },
         ],
         "no-mixed-spaces-and-tabs": [
@@ -381,8 +381,8 @@ module.exports = {
         "no-multi-spaces": [
             "error", 
             {
-                exceptions: {
-                    VariableDeclarator: true, 
+                "exceptions": {
+                    "VariableDeclarator": true, 
                 },
             },
         ],
@@ -390,7 +390,7 @@ module.exports = {
             "error",
             "never",
             { 
-                exceptions: [
+                "exceptions": [
                     "{}",
                     "[]",
                     "()",
@@ -412,37 +412,37 @@ module.exports = {
         "arrow-spacing": [
             "error",
             {
-                before: true,
-                after: true,
+                "before": true,
+                "after": true,
             }
         ],
         "comma-spacing": [
             "error",
             {
-                before: false,
-                after: true,
+                "before": false,
+                "after": true,
             },
         ],
         "semi-spacing": [ // semi colon spacing
             "error",
             {
-                before: false, 
-                after: true
+                "before": false, 
+                "after": true
             },
         ],
         "keyword-spacing": [
             "error",
             {
-                before: true,
-                after: true,
+                "before": true,
+                "after": true,
             }
         ],
         "key-spacing": [
             "error",
             {
-                beforeColon: false,
-                afterColon: true,
-                mode: "strict"
+                "beforeColon": false,
+                "afterColon": true,
+                "mode": "strict"
             },
         ],
         "block-spacing": [
@@ -460,8 +460,8 @@ module.exports = {
         "yield-star-spacing": [
             "error", 
             {
-                before: false, 
-                after: true,
+                "before": false, 
+                "after": true,
             },
         ],
         "template-curly-spacing": [
@@ -481,17 +481,17 @@ module.exports = {
 		"space-before-function-paren": [
             "error", 
             { 
-                anonymous: "always",
-                named: "never",
-                asyncArrow: "never"
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "never"
             },
         ],
 		"space-infix-ops": "error",
 		"space-unary-ops": [
             "error",
             {
-                words: true, 
-                nonwords: false,
+                "words": true, 
+                "nonwords": false,
             },
         ],
         "lines-between-class-members": [
@@ -504,7 +504,7 @@ module.exports = {
             "error", 
             "always", 
             { 
-                exceptions: [
+                "exceptions": [
                     "-", 
                     "*", 
                     "+",
