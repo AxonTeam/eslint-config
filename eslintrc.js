@@ -126,7 +126,7 @@ module.exports = {
 
         "operator-assignment": [
             "error",
-            "alwais",
+            "always",
         ],
         "no-duplicate-imports": [
             "error",
@@ -280,7 +280,7 @@ module.exports = {
         // STYLE (visual)
         // -----------------------
         indent: [
-            error,
+            "error",
             4,
             { 
                 SwitchCase: 1 
@@ -333,8 +333,8 @@ module.exports = {
         
         // QUOTES
         quotes: [
-            error,
-            single,
+            "error",
+            "single",
             { 
                 avoidEscape: true, 
                 allowTemplateLiterals: true,
@@ -353,7 +353,7 @@ module.exports = {
             "always",
         ],
         "no-irregular-whitespace": [
-            error,
+            "error",
             {
                 skipStrings: true,
                 skipComments: true,
@@ -364,7 +364,7 @@ module.exports = {
         "no-trailing-spaces": [
             "error",
             { 
-                skipBlankLine: true,
+                skipBlankLines: true,
                 ignoreComments: false,
             },
         ],
@@ -395,9 +395,6 @@ module.exports = {
         "func-call-spacing": [
             "error", 
             "never",
-            { 
-                allowNewlines: false 
-            },
         ],
         "array-bracket-spacing": [
             "error",
@@ -478,9 +475,10 @@ module.exports = {
         ],
 		"space-before-function-paren": [
             "error", 
-            "never",
             { 
-                anonymous: "always"
+                anonymous: "always",
+                named: "never",
+                asyncArrow: "never"
             },
         ],
 		"space-infix-ops": "error",
@@ -508,5 +506,5 @@ module.exports = {
                 ] 
             },
         ],
-    }
+    },
 }
