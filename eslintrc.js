@@ -34,11 +34,11 @@ module.exports = {
             }
         ],
         "max-classes-per-file": [
-            "error",
+            "warn",
             1,
         ],
         "no-magic-numbers": [
-            "error",
+            "warn",
             { 
                 "ignoreArrayIndexes": true,
             },
@@ -89,14 +89,14 @@ module.exports = {
             "error",
             {
                 multiline: true,
-                minItems: 5,
+                minItems: 3,
             },
         ],
         "array-bracket-newline": [
             "error",
             {
                 multiline: true,
-                minItems: 5,
+                minItems: 3,
             },
         ],
         "object-curly-newline": [
@@ -104,7 +104,7 @@ module.exports = {
             {
                 multiline: true,
                 consistent: true,
-                minProperties: 5,
+                minProperties: 3,
             },
         ],
 
@@ -144,7 +144,7 @@ module.exports = {
 		"prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-destructuring": [ // CAREFUL FOR THIS ONE
-            "error", 
+            "warn", 
             {
                 array: false,
                 object: true,
@@ -159,13 +159,16 @@ module.exports = {
         "camelcase": [
             "error",
             {
-                properties: "always",
-                ignoreDestructuring: false,
+                properties: "never", // API request sometimes need snake case names
+                ignoreDestructuring: true,
             },
         ],
         "one-var": [
             "error",
-            "consecutive",
+            {
+                initialized: "never",
+                uninitialized: "consecutive",
+            },
         ],
         "one-var-declaration-per-line": [
             "error",
@@ -174,11 +177,13 @@ module.exports = {
         "no-invalid-this": "error", // this outside of class / function
         "no-shadow-restricted-names": "error",
         "no-shadow": [
-            "error",
+            "warn",
             {
                 builtinGlobals: true,
                 hoist: "functions",
                 allow: [
+                    "module",
+                    "cd",
                     "resolve",
                     "reject",
                     "done",
@@ -322,7 +327,7 @@ module.exports = {
         "dot-notation": [
             "error",
             { 
-                allowKeywords: false,
+                allowKeywords: true,
                 allowPattern: "^[a-z]+((_|-)[a-z]+)+$",
             }
         ],
