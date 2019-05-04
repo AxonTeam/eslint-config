@@ -39,7 +39,8 @@ module.exports = {
         ],
         "no-magic-numbers": [
             "warn",
-            { 
+            {
+                "ignore": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
                 "ignoreArrayIndexes": true,
             },
         ],
@@ -104,7 +105,7 @@ module.exports = {
             {
                 "multiline": true,
                 "consistent": true,
-                "minProperties": 3,
+                "minProperties": 5,
             },
         ],
 
@@ -270,7 +271,7 @@ module.exports = {
         "max-nested-callbacks": [
             "error", 
             { 
-                "max": 4, 
+                "max": 3, 
             },
         ],
         "max-statements-per-line": [
@@ -327,8 +328,8 @@ module.exports = {
         "dot-notation": [
             "error",
             { 
-                allowKeywords: true,
-                allowPattern: "^[a-z]+((_|-)[a-z]+)+$",
+                "allowKeywords": true,
+                "allowPattern": "^[a-z]+((_|-)[a-z]+)+$",
             }
         ],
         "operator-linebreak": [
