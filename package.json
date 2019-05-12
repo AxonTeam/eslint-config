@@ -1,6 +1,6 @@
 {
   "name": "@axonteam/eslint-config",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Eslint config for all AxonTeam javascript projects",
   "main": "index.js",
   "repository": "https://github.com/AxonTeam/eslint-config-axonteam.git",
