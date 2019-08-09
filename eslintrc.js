@@ -319,6 +319,10 @@ module.exports = {
                 "allowSingleLine": false, 
             },
         ],
+        "curly": [
+            "error",
+            "all",
+        ],
 
         // CODE
         "dot-location": [
