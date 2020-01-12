@@ -6,6 +6,9 @@
   "repository": "https://github.com/AxonTeam/eslint-config.git",
   "author": "khaazz <khaaz.dev@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "eslint ."
+  },
   "peerDependencies": {
     "eslint": ">= 3"
   },

@@ -1,283 +1,264 @@
 module.exports = {
-    "env": {
-        "es6": true,
-        "node": true,
-        "mongo": true,
+    env: {
+        es6: true,
+        node: true,
+        mongo: true,
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 8,
-        "sourceType": "module",
+    extends: 'eslint:recommended',
+    parserOptions: {
+        ecmaVersion: 8,
+        sourceType: 'module',
     },
-    "rules": {
+    rules: {
 
         // -----------------------
         // CODE
         // -----------------------
-        "no-use-before-define": [
-            "error",
+        'no-use-before-define': [
+            'error',
             {
-                "functions": true,
-                "classes": true,
-                "variables": true,
-            }
-        ],
-        "eqeqeq": [ // === instead of ==
-            "error",
-            "smart",
-        ],
-        "yoda": [ // comparison: color === 'blue'
-            "error", 
-            "never", 
-            { 
-                "exceptRange": true 
-            }
-        ],
-        "max-classes-per-file": [
-            "warn",
-            1,
-        ],
-        "no-magic-numbers": [
-            "warn",
-            {
-                "ignore": [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000, 10000, 100000, 1000000],
-                "ignoreArrayIndexes": true,
+                functions: true,
+                classes: true,
+                variables: true,
             },
         ],
-        "strict": [
-            "error",
-            "global",
+        'eqeqeq': [ // === instead of ==
+            'error', 'smart',
         ],
-        "no-unused-expressions": [
-            "error",
+        'yoda': [ // comparison: color === 'blue'
+            'error',
+            'never',
             {
-                "allowShortCircuit": true,
-                "allowTernary": true,
+                exceptRange: true,
             },
         ],
-        "accessor-pairs": "warn", // setter goes with a getter
-        "array-callback-return": "error",
-        "no-implied-eval": "error",
-        "no-lone-blocks": "error",
-        "no-sequences": "error", // commas
-        "no-throw-literal": "error",
-        "no-useless-call": "error", // .call
-        "wrap-iife": "error", // const f = (function () { }()) <= wrap
-        "object-shorthand": [
-            "error",
-            "always",
-        ],
-        "no-confusing-arrow": [
-            "error",
+        'max-classes-per-file': ['warn', 1],
+        'no-magic-numbers': [
+            'warn',
             {
-                "allowParens": true,
+                ignore: [
+                    -1,
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    100,
+                    1000,
+                    10000,
+                    100000,
+                    1000000,
+                ],
+                ignoreArrayIndexes: true,
             },
         ],
-        "no-console": "off",
-        "unicode-bom": [
-            "error",
-            "never",
+        'strict': ['error', 'global'],
+        'no-unused-expressions': [
+            'error',
+            {
+                allowShortCircuit: true,
+                allowTernary: true,
+            },
         ],
+        'accessor-pairs': 'warn', // setter goes with a getter
+        'array-callback-return': 'error',
+        'no-implied-eval': 'error',
+        'no-lone-blocks': 'error',
+        'no-sequences': 'error', // commas
+        'no-throw-literal': 'error',
+        'no-useless-call': 'error', // .call
+        'wrap-iife': 'error', // const f = (function () { }()) <= wrap
+        'object-shorthand': ['error', 'always'],
+        'no-confusing-arrow': [
+            'error',
+            {
+                allowParens: true,
+            },
+        ],
+        'no-console': 'off',
+        'unicode-bom': ['error', 'never'],
         
         // NEWLINE
-        "newline-per-chained-call": [
-            "error", 
-            { 
-                "ignoreChainWithDepth": 3, 
+        'newline-per-chained-call': [
+            'error',
+            {
+                ignoreChainWithDepth: 3,
             },
         ],
-        "array-element-newline": [
-            "error",
+        'array-element-newline': [
+            'error',
             {
-                "multiline": true,
-                "minItems": 3,
+                multiline: true,
+                minItems: 3,
             },
         ],
-        "array-bracket-newline": [
-            "error",
+        'array-bracket-newline': [
+            'error',
             {
-                "multiline": true,
-                "minItems": 3,
+                multiline: true,
+                minItems: 3,
             },
         ],
-        "object-curly-newline": [
-            "error",
+        'object-curly-newline': [
+            'error',
             {
-                "multiline": true,
-                "consistent": true,
-                "minProperties": 5,
+                multiline: true,
+                consistent: true,
+                minProperties: 5,
             },
         ],
 
         // OPERATORS
-        "no-lonely-if": "error",
-        "no-mixed-operators": "error",
-        "no-void": "error", // void operator
-        "no-eval": "error", // eval operator
-        "no-nested-ternary": "error",
-        "no-unneeded-ternary": "error",
-        "no-useless-computed-key": "error",
-        "no-useless-constructor": "error",
-        "no-else-return": [
-            "error", 
-            { 
-                "allowElseIf": false,
+        'no-lonely-if': 'error',
+        'no-mixed-operators': 'error',
+        'no-void': 'error', // void operator
+        'no-eval': 'error', // eval operator
+        'no-nested-ternary': 'error',
+        'no-unneeded-ternary': 'error',
+        'no-useless-computed-key': 'error',
+        'no-useless-constructor': 'error',
+        'no-else-return': [
+            'error',
+            {
+                allowElseIf: false,
             },
         ],
 
-        "operator-assignment": [
-            "error",
-            "always",
-        ],
-        "no-duplicate-imports": [
-            "error",
+        'operator-assignment': ['error', 'always'],
+        'no-duplicate-imports': [
+            'error',
             {
-                "includeExports": true,
+                includeExports: true,
             },
         ],
-        "prefer-arrow-callback": [
-            "error",
-            { 
-                "allowNamedFunctions": false,
-                "allowUnboundThis": true, 
-            }
-        ],
-		"prefer-rest-params": "error",
-        "prefer-spread": "error",
-        "prefer-destructuring": [ // CAREFUL FOR THIS ONE
-            "warn", 
+        'prefer-arrow-callback': [
+            'error',
             {
-                "array": false,
-                "object": true,
-            }, 
-            {
-                "enforceForRenamedProperties": false,
+                allowNamedFunctions: false,
+                allowUnboundThis: true,
             },
         ],
-        "prefer-template": "warn",
+        'prefer-rest-params': 'error',
+        'prefer-spread': 'error',
+        'prefer-destructuring': [ // CAREFUL FOR THIS ONE
+            'warn',
+            {
+                array: false,
+                object: true,
+            },
+            {
+                enforceForRenamedProperties: false,
+            },
+        ],
+        'prefer-template': 'warn',
 
         // VARIABLES
-        "camelcase": [
-            "error",
+        'camelcase': [
+            'error',
             {
-                "properties": "never", // API request sometimes need snake case names
-                "ignoreDestructuring": true,
+                properties: 'never', // API request sometimes need snake case names
+                ignoreDestructuring: true,
             },
         ],
-        "one-var": [
-            "error",
+        'one-var': [
+            'error',
             {
-                "initialized": "never",
-                "uninitialized": "consecutive",
+                initialized: 'never',
+                uninitialized: 'consecutive',
             },
         ],
-        "one-var-declaration-per-line": [
-            "error",
-            "always",
-        ],
-        "no-invalid-this": "error", // this outside of class / function
-        "no-shadow-restricted-names": "error",
-        "no-shadow": [
-            "warn",
+        'one-var-declaration-per-line': ['error', 'always'],
+        'no-invalid-this': 'error', // this outside of class / function
+        'no-shadow-restricted-names': 'error',
+        'no-shadow': [
+            'warn',
             {
-                "builtinGlobals": true,
-                "hoist": "functions",
-                "allow": [
-                    "module",
-                    "cd",
-                    "resolve",
-                    "reject",
-                    "done",
-                    "cb",
-                    "callback",
+                builtinGlobals: true,
+                hoist: 'functions',
+                allow: [
+                    'module',
+                    'cd',
+                    'resolve',
+                    'reject',
+                    'done',
+                    'cb',
+                    'callback',
                 ],
             },
         ],
-        "prefer-const": [
-            "error",
-        ],
-        "no-var": [
-            "error",
-        ],
-        "consistent-this": [
-            "error", 
-            "self",
-        ],
-        "no-self-compare": "error",
-        "no-useless-rename": "error",
+        'prefer-const': ['error'],
+        'no-var': ['error'],
+        'consistent-this': ['error', 'self'],
+        'no-self-compare': 'error',
+        'no-useless-rename': 'error',
         
         // FUNCTIONS
-        "no-empty-function": [
-            "error",
+        'no-empty-function': [
+            'error',
             {
-                "allow": [
-                    "arrowFunctions"
-                ] 
-            }
-        ],
-        "no-return-assign": "error", // assignement in return statement
-        "no-return-await": "error",
-        "callback-return": "error",
-        "handle-callback-err": [
-            "error", 
-            "^(err|error|.+Error)$",
-        ],
-        "arrow-body-style": [
-            "error",
-            "as-needed",
-            {
-                "requireReturnForObjectLiteral": true,
+                allow: ['arrowFunctions'],
             },
         ],
-        "implicit-arrow-linebreak": [
-            "error",
-            "beside",
-        ],
-        "consistent-return": [
-            "error",
+        'no-return-assign': 'error', // assignement in return statement
+        'no-return-await': 'error',
+        'callback-return': 'error',
+        'handle-callback-err': ['error', '^(err|error|.+Error)$'],
+        'arrow-body-style': [
+            'error',
+            'as-needed',
             {
-                "treatUndefinedAsUnspecified": true,
+                requireReturnForObjectLiteral: true,
+            },
+        ],
+        'implicit-arrow-linebreak': ['error', 'beside'],
+        'consistent-return': [
+            'error',
+            {
+                treatUndefinedAsUnspecified: true,
             },
         ],
 
         // LOOP
-        "no-unmodified-loop-condition": "error",
+        'no-unmodified-loop-condition': 'error',
 
         // NUMBERS - CHAR
-        "no-floating-decimal": "error",
-        "no-octal-escape": "error", // \u00A9 or \xA9 (unicode or hexa)
-        "no-useless-concat": "error",
+        'no-floating-decimal': 'error',
+        'no-octal-escape': 'error', // \u00A9 or \xA9 (unicode or hexa)
+        'no-useless-concat': 'error',
 
         // CREATION
-        "no-new-func": "error",
-        "no-new-wrappers": "error",
-        "no-new-object": "error",
-        "no-array-constructor": "error",
-        "no-new": "error",
-        "new-cap": [
-            "error",
+        'no-new-func': 'error',
+        'no-new-wrappers': 'error',
+        'no-new-object': 'error',
+        'no-array-constructor': 'error',
+        'no-new': 'error',
+        'new-cap': [
+            'error',
             {
-                "newIsCap": true,
-                "capIsNew": true,
-            }
+                newIsCap: true,
+                capIsNew: true,
+            },
         ],
         
         // COMPLEXITY
         // --- other max rules are not used because too stricts? ---
-        "max-depth": [
-            "error",
-            4,
-        ],
-        "max-nested-callbacks": [
-            "error", 
-            { 
-                "max": 3, 
+        'max-depth': ['error', 4],
+        'max-nested-callbacks': [
+            'error',
+            {
+                max: 3,
             },
         ],
-        "max-statements-per-line": [
-            "error", 
-            { 
-                "max": 2, 
+        'max-statements-per-line': [
+            'error',
+            {
+                max: 2,
             },
         ],
         
@@ -285,236 +266,177 @@ module.exports = {
         // -----------------------
         // STYLE (visual)
         // -----------------------
-        "indent": [
-            "error",
+        'indent': [
+            'error',
             4,
-            { 
-                "SwitchCase": 1 
-            }
-        ],
-        "semi": [
-            "error", 
-            "always"
-        ],
-        "comma-dangle": [
-            "error",
-            "always-multiline",
-        ],
-        "semi-style": [
-            "error",
-            "last",
-        ],
-        "linebreak-style": [
-            "error", 
-            "unix",
-        ],
-        "comma-style": [
-            "error",
-            "last",
-        ],
-        "brace-style": [
-            "error",
-            "1tbs",
-            { 
-                "allowSingleLine": false, 
+            {
+                SwitchCase: 1,
             },
         ],
-        "curly": [
-            "error",
-            "all",
+        'semi': ['error', 'always'],
+        'comma-dangle': ['error', 'always-multiline'],
+        'semi-style': ['error', 'last'],
+        'linebreak-style': ['error', 'unix'],
+        'comma-style': ['error', 'last'],
+        'brace-style': [
+            'error',
+            '1tbs',
+            {
+                allowSingleLine: false,
+            },
         ],
+        'curly': ['error', 'all'],
 
         // CODE
-        "dot-location": [
-            "error", 
-            "property",
+        'dot-location': ['error', 'property'],
+        'dot-notation': [
+            'error',
+            {
+                allowKeywords: true,
+                allowPattern: '^[a-z]+((_|-)[a-z]+)+$',
+            },
         ],
-        "dot-notation": [
-            "error",
-            { 
-                "allowKeywords": true,
-                "allowPattern": "^[a-z]+((_|-)[a-z]+)+$",
-            }
-        ],
-        "operator-linebreak": [
-            "error", 
-            "before"
-        ],
+        'operator-linebreak': ['error', 'before'],
         
         // QUOTES
-        "quotes": [
-            "error",
-            "single",
-            { 
-                "avoidEscape": true, 
-                "allowTemplateLiterals": true,
-            }
+        'quotes': [
+            'error',
+            'single',
+            {
+                avoidEscape: true,
+                allowTemplateLiterals: true,
+            },
         ],
-        "quote-props": [
-            "error",
-            "consistent-as-needed",
-        ],
+        'quote-props': ['error', 'consistent-as-needed'],
         
         // -----------------------
         // SPACING
         // -----------------------
-        "eol-last": [ // ending space
-            "error",
-            "always",
+        'eol-last': [ // ending space
+            'error', 'always',
         ],
-        "no-irregular-whitespace": [
-            "error",
+        'no-irregular-whitespace': [
+            'error',
             {
-                "skipStrings": true,
-                "skipComments": true,
-                "skipRegExps": true,
-                "skipTemplates": true,
-            }
-        ],
-        "no-trailing-spaces": [
-            "error",
-            { 
-                "skipBlankLines": true,
-                "ignoreComments": false,
+                skipStrings: true,
+                skipComments: true,
+                skipRegExps: true,
+                skipTemplates: true,
             },
         ],
-        "no-mixed-spaces-and-tabs": [
-            "error", 
-            "smart-tabs"
-        ],
-        "no-whitespace-before-property": "error",
-        "no-multi-spaces": [
-            "error", 
+        'no-trailing-spaces': [
+            'error',
             {
-                "exceptions": {
-                    "VariableDeclarator": true, 
+                skipBlankLines: true,
+                ignoreComments: false,
+            },
+        ],
+        'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+        'no-whitespace-before-property': 'error',
+        'no-multi-spaces': [
+            'error',
+            {
+                exceptions: {
+                    VariableDeclarator: true,
                 },
             },
         ],
-        "space-in-parens": [
-            "error",
-            "never",
-            { 
-                "exceptions": [
-                    "{}",
-                    "[]",
-                    "()",
-                ], 
-            }
-        ],
-        "func-call-spacing": [
-            "error", 
-            "never",
-        ],
-        "array-bracket-spacing": [
-            "error",
-            "never",
-        ],
-        "object-curly-spacing": [
-            "error", 
-            "always",
-        ],
-        "arrow-spacing": [
-            "error",
+        'space-in-parens': [
+            'error',
+            'never',
             {
-                "before": true,
-                "after": true,
-            }
-        ],
-        "comma-spacing": [
-            "error",
-            {
-                "before": false,
-                "after": true,
+                exceptions: [
+                    '{}',
+                    '[]',
+                    '()',
+                ],
             },
         ],
-        "semi-spacing": [ // semi colon spacing
-            "error",
+        'func-call-spacing': ['error', 'never'],
+        'array-bracket-spacing': ['error', 'never'],
+        'object-curly-spacing': ['error', 'always'],
+        'arrow-spacing': [
+            'error',
             {
-                "before": false, 
-                "after": true
+                before: true,
+                after: true,
             },
         ],
-        "keyword-spacing": [
-            "error",
+        'comma-spacing': [
+            'error',
             {
-                "before": true,
-                "after": true,
-            }
-        ],
-        "key-spacing": [
-            "error",
-            {
-                "beforeColon": false,
-                "afterColon": true,
-                "mode": "strict"
+                before: false,
+                after: true,
             },
         ],
-        "block-spacing": [
-            "error",
-            "always",
-        ],
-        "computed-property-spacing": [
-            "error",
-            "never",
-        ],
-        "rest-spread-spacing": [
-            "error",
-            "never",
-        ],
-        "yield-star-spacing": [
-            "error", 
+        'semi-spacing': [ // semi colon spacing
+            'error',
             {
-                "before": false, 
-                "after": true,
+                before: false,
+                after: true,
             },
         ],
-        "template-curly-spacing": [
-            "error",
-            "never",
+        'keyword-spacing': [
+            'error',
+            {
+                before: true,
+                after: true,
+            },
         ],
+        'key-spacing': [
+            'error',
+            {
+                beforeColon: false,
+                afterColon: true,
+                mode: 'strict',
+            },
+        ],
+        'block-spacing': ['error', 'always'],
+        'computed-property-spacing': ['error', 'never'],
+        'rest-spread-spacing': ['error', 'never'],
+        'yield-star-spacing': [
+            'error',
+            {
+                before: false,
+                after: true,
+            },
+        ],
+        'template-curly-spacing': ['error', 'never'],
 
         // BLOCK SPACING
-        "padded-blocks": [ // CHECK IF NEED CHANGE ???
-            "error",
-            "never",
+        'padded-blocks': [ // CHECK IF NEED CHANGE ???
+            'error', 'never',
         ],
-		"space-before-blocks": [
-            "error",
-            "always",
-        ],
-		"space-before-function-paren": [
-            "error", 
-            { 
-                "anonymous": "always",
-                "named": "never",
-                "asyncArrow": "never"
-            },
-        ],
-		"space-infix-ops": "error",
-		"space-unary-ops": [
-            "error",
+        'space-before-blocks': ['error', 'always'],
+        'space-before-function-paren': [
+            'error',
             {
-                "words": true, 
-                "nonwords": false,
+                anonymous: 'always',
+                named: 'never',
+                asyncArrow: 'never',
             },
         ],
-        "lines-between-class-members": [
-            "error",
-            "always",
+        'space-infix-ops': 'error',
+        'space-unary-ops': [
+            'error',
+            {
+                words: true,
+                nonwords: false,
+            },
         ],
+        'lines-between-class-members': ['error', 'always'],
         
         // COMMENTS
-        "spaced-comment": [
-            "error", 
-            "always", 
-            { 
-                "exceptions": [
-                    "-", 
-                    "*", 
-                    "+",
-                ] 
+        'spaced-comment': [
+            'error',
+            'always',
+            {
+                exceptions: [
+                    '-',
+                    '*',
+                    '+',
+                ],
             },
         ],
     },
-}
+};
