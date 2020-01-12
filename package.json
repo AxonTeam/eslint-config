@@ -3,14 +3,14 @@
   "version": "2.2.0",
   "description": "Eslint config for all AxonTeam javascript projects",
   "main": "index.js",
-  "repository": "https://github.com/AxonTeam/eslint-config-axonteam.git",
+  "repository": "https://github.com/AxonTeam/eslint-config.git",
   "author": "khaazz <khaaz.dev@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "eslint": ">= 3"
   },
   "devDependencies": {
-    "eslint": "^5.14.1"
+    "eslint": "^6.8.0"
   },
   "keywords": [
     "eslint",
